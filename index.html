@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Poppins:ital,wght@0,200;0,400;0,700;1,500&family=Roboto:wght@300;400;500;700&family=Rubik:ital,wght@0,300;0,400;0,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- bootstrap styles and icon-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <title>McKinley & Rice.</title>
+</head>
+<body>
+    <div class="wrapper d-flex">
+        <nav id="sidebar" class="d-none d-md-block nav-style" style="z-index: 11;">
+            <div class="sidebar-header mx-5 my-4">
+                <h3><strong>McKinley <span class="text-danger">&</span></strong></h3>
+                <h3><strong> Rice<span class="text-danger">.</span></strong></h3>
+            </div>
+
+            <div>
+                <div class="mt-5">
+                    <p class="mx-5">Home</p>
+                    <div class="d-flex">
+                        <div class="sidebar-hover"></div>
+                        <i class="far fa-bold fa-compass fa-lg nav-icon"></i>
+                        <p class="mx-2 text-secondary" style="font-weight: 600;">Browser</p>
+                    </div>
+                    <div class="d-flex">
+                        <div style="margin-right: 35px;"></div>
+                        <i class="bi bi-bookmark-heart fa-lg"></i>
+                        <p class="mx-2 text-secondary" style="font-weight: 600;">Watchlist</p>
+                    </div>
+                    <div class="d-flex">
+                        <div style="margin-right: 35px;"></div>
+                        <i class="bi bi-collection-play fa-lg"></i>
+                        <p class="mx-2 text-secondary" style="font-weight: 600;"> Continue Watching</p>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <p class="mx-5">General</p>
+                    <div class="d-flex">
+                        <div style="margin-right: 35px;"></div>
+                        <i class="bi bi-gear fa-lg"></i>
+                        <p class="mx-2 text-secondary" style="font-weight: 600;">Setting</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div style="margin-right: 35px;"></div>
+                        <i class="bi bi-upload fa-lg logout-icon"></i>
+                        <p class="mx-2 text-secondary" style="font-weight: 600;">Log out</p>
+                    </div>
+                </div>
+
+
+                <div class="mt-4">
+                    <p class="mx-5">Plug-in</p>
+                    <div class="d-flex">
+                        <div class="sidebar-hover"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="svg-icon"><path d="M10 0v8L7 0H4v16h3V8l3 8h3V0z"/></svg>
+                        <p class="mx-2 text-secondary" style="font-weight: 600;">Netflix</p>
+                    </div>
+                    <div class="d-flex">
+                        <div style="margin-right: 35px;"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" class="svg-icon" style="fill: gray"><path d="M15.258,23.94H21V13.536c0-4.399-2.235-6.147-5.861-6.147l-0.754-0.023h-3.583c-0.74,0.012-1.442,0.159-2.089,0.418l0.04-0.014V0H3v24h5.762v-9.486c-0.002-0.027-0.003-0.059-0.003-0.091c0-0.87,0.689-1.579,1.55-1.605h0.002h3.368c0.862,0,1.563,0.693,1.58,1.554v0.002V23.94z"/></svg>
+                        <p class="mx-2 text-secondary" style="font-weight: 600;">Hulu</p>
+                    </div>
+                    <div class="d-flex">
+                        <div style="margin-right: 35px;"></div>
+                        <i class="bi bi-youtube fa-lg" style="color: gray;"></i>
+                        <p class="mx-2 text-secondary" style="font-weight: 600;">Youtube</p>
+                    </div>
+                </div>
+            </div>
+        
+        </nav>
+
+        <!-- blur effect div -->
+        <div class="position-fixed bottom-0 " style="width: 100%; height: 100px; background-color: hsl(0  0% 100%/ 0.5); z-index: 10;"></div>
+
+
+         <!-- main showcase section -->
+        <main>
+            <section class="container d-flex flex-column justify-content-center mt-3">
+                <div class="search-header"> 
+                    <div class="container  d-flex align-items-center justify-content-between">
+                        <div class="search-form border border-secondary rounded-pill d-flex align-items-center"> 
+                            <i class="bi bi-search fa-lg px-md-4 position-relative" style="color: #ee7d7d; left: 12px;"></i>
+                            <input type="text" class="search-input border-0 d-none d-md-block" placeholder="Search movies/ series" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-bell fa-lg position-relative" style="margin-top: -20px;"><span
+                                class="position-absolute top-0 start-98 translate-middle badge border border-light rounded-circle bg-danger p-1"
+                                ><span class="visually-hidden">unread messages</span></span></i>
+                            
+                            <i class="bi bi-chat-square-text  fa-lg position-relative px-4" style="margin-top: -20px;"><span
+                                class="position-absolute top-0 start-98 translate-middle badge border border-light rounded-circle bg-danger p-1"
+                                ><span class="visually-hidden">unread messages</span></i>
+                            
+        
+                            <!-- Avatar -->
+                            <div class="d-flex flex-column align-items-center">
+                                <img src="assests/avatar_man_beard_brown_hair_boy_people_icon_159121.png" class="avatar-img border border-dark" alt="">
+                                <p><strong>Shashank P<span class="text-danger">.</span></strong></p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+    
+                <div class="overflow-hidden showcase-image showcase-div position-relative">
+                    <img src="assests/friendsbanner.jpg" class="img-fluid" alt="">
+                    <p class="text-light text position-absolute showcase-top">Popular this Weekend</p>
+                    <h3 class="text-light position-absolute showcase-title">Friends</h3>
+                    <p class="text-light position-absolute showcase-para">10 Seasons</p>
+                    <i class="fas fa-chevron-left fa-2x text-light position-absolute showcase-arrow1-icon cheveron"></i>
+                    <i class="fas fa-chevron-right fa-2x text-light position-absolute showcase-arrow2-icon cheveron"></i>
+                    <div class="d-none d-sm-block" style="background-color: white; width: 25px; height: 25px; position: absolute; top: 20px; right: 39px; border-radius: 50%;"></div>
+                    <i class="bi bi-plus-circle-fill fa-2x position-absolute showcase-plus-icon d-none d-sm-block" ></i>
+                    <button class="rounded-pill position-absolute text-light border-0 p-2 px-3 text-center showcase-btn d-none d-md-block" style="background-color: #ee7d7d;">Watch now</button>
+                    <i class="bi bi-play-circle position-absolute fa-3x showcase-btn d-block d-md-none" style="color: #ee7d7d;"></i>
+                </div>
+            </section>
+    
+            <!-- features section -->
+    
+            <section class="container mt-2" >
+                <div class="d-flex justify-content-between" >
+                    <h2>Features<span class="text-danger">.</span></h2>
+                    <i class="bi bi-caret-right-square fa-2x" style="margin-right:5%;"></i>
+                </div>
+                <div class="d-block d-lg-flex">
+                    <div class="card overflow-hidden card-radius">
+                        <img class="card-img-top border-0" src="assests/card-rickmorty.jpg" alt="Card image cap" />
+                    </div>
+                    <div class="card overflow-hidden card-radius">
+                        <img class="card-img-top border-0" src="assests/card-thebigbang.jpeg" alt="Card image cap" />
+                    </div>
+                    <div class="card overflow-hidden card-radius">
+                        <img class="card-img-top border-0" src="assests/card-narcos.jpeg" alt="Card image cap" />
+                    </div>
+                    <div class="card overflow-hidden card-radius">
+                        <img class="card-img-top border-0" src="assests/card-naruto.jpg" alt="Card image cap" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- continue watching -->
+            <section class="container mt-1" >
+                <div class="d-flex justify-content-between" >
+                    <h2>Continue Watching<span class="text-danger">.</span></h2>
+                    <i class="bi bi-caret-right-square fa-2x" style="margin-right: 5%;"></i>
+                </div>
+                <div class="d-block d-lg-flex justify-content-evenly">
+                    <div class="card overflow-hidden card-radius">
+                        <img class="card-img-top border-0" src="assests/card-breakingbad.jpg" alt="Card image cap" />
+                    </div>
+                    <div class="card overflow-hidden card-radius">
+                        <img class="card-img-top border-0" src="assests/card-avengers.jpg" alt="Card image cap" />
+                    </div>
+                    <div class="card overflow-hidden card-radius">
+                        <img class="card-img-top border-0" src="assests/card-greenlan.jpg" alt="Card image cap" />
+                    </div>
+                    <div class="card overflow-hidden card-radius">
+                        <img class="card-img-top border-0" src="assests/card-rickmorty.jpg" alt="Card image cap" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- watch list -->
+
+            <section class="container mt-5 mb-5" >
+                <div class="d-flex justify-content-between" >
+                    <h2>Watchlist<span class="text-danger">.</span></h2>
+                    <i class="bi bi-caret-right-square fa-2x" style="margin-right: 5%;"></i>
+                </div>
+                <div class="d-block d-lg-flex justify-content-evenly">
+                    <div class="card overflow-hidden card-radius">
+                        <img class="card-img-top border-0" src="assests/card-breakingbad.jpg" alt="Card image cap" />
+                    </div>
+                    <div class="card overflow-hidden card-radius">
+                        <img class="card-img-top border-0" src="assests/card-naruto.jpg" alt="Card image cap" />
+                    </div>
+                    <div class="card overflow-hidden card-radius">
+                        <img class="card-img-top border-0" src="assests/card-rickmorty.jpg" alt="Card image cap" />
+                    </div>
+                    <div class="card overflow-hidden card-radius">
+                        <img class="card-img-top border-0" src="assests/card-avengers.jpg" alt="Card image cap" />
+                    </div>
+                </div>
+            </section>
+
+            
+        </main>
+    </div>  
+    <div class="mt-5 mb-5"></div>
+
+   
+
+
+    <!-- bootstrap js bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
